@@ -29,7 +29,7 @@ class DishDetail extends Component {
       return (
           <ul key={comment.id} className='list-unstyled'>
             <li>{comment.comment}</li>
-            <li>--{comment.author}, {comment.date}</li>
+            <li>--{comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</li>
           </ul>
       );
     })
@@ -46,7 +46,9 @@ class DishDetail extends Component {
       return (<div></div>);
     }
 
-    return (<div className='row'>
+    return (
+    <div className='container'>
+    <div className='row'>
       <div className='col-12 col-md-5 m-1'>
         {this.renderDish(this.props.dish)}
       </div>
@@ -54,7 +56,9 @@ class DishDetail extends Component {
         <h4>Comments</h4>
         {this.renderComments(this.props.dish.comments)}
       </div>
-    </div>);
+    </div>
+    </div>
+    );
   };
 }
 
