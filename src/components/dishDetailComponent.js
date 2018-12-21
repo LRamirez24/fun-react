@@ -1,6 +1,7 @@
 import React from 'react';
+import CommentForm from './commentForm';
 import { Card, CardImg, CardText, CardBody,
-    CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
+    CardTitle, Breadcrumb, Button, BreadcrumbItem } from 'reactstrap';
 import { Link } from 'react-router-dom';
 
 
@@ -32,6 +33,7 @@ import { Link } from 'react-router-dom';
             <li>{comment.comment}</li>
             <li>--{comment.author}, {new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: '2-digit'}).format(new Date(Date.parse(comment.date)))}</li>
           </ul>
+
       );
     })
   }
@@ -66,7 +68,9 @@ import { Link } from 'react-router-dom';
                     </div>
                     <div className="col-12 col-md-5 m-1">
                         <RenderComments comments={props.comments} />
+                        <CommentForm />
                     </div>
+                  
                 </div>
                 </div>
             );
