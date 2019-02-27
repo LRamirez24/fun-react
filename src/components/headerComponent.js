@@ -109,7 +109,7 @@ class Header extends Component {
        						Remember Me
        					</Label>
        				</FormGroup>
-       				<Button type="submit" value="submit" className="primary"> Login</Button>
+       				<Button type="submit" value="submit" color="primary">Login</Button>
        			</Form>
        		</ModalBody>
        </Modal>

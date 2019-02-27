@@ -202,7 +202,10 @@ class CommentForm extends Component {
                     <div className="col-12 col-md-5 m-1">
                         <RenderDish dish={props.dish} />
                     </div>
-                        <RenderComments comments={props.comments} />                  
+                        <RenderComments comments={props.comments} />
+                        
+                    
+                  
                 </div>
                 </div>
             );
